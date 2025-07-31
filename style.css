@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffaf5;
+  color: #333;
+  padding-bottom: 60px;
+}
+
+header {
+  background: #ff7043;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+header input {
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  margin-top: 0.5rem;
+}
+
+.filters {
+  padding: 1rem;
+  text-align: center;
+  background: #ffe0b2;
+}
+
+.filters button {
+  margin: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffb74d;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filters button:hover {
+  background-color: #ffa726;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.product {
+  background: #fff3e0;
+  border-radius: 10px;
+  width: 280px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.post-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff5722;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-content input, .modal-content select {
+  display: block;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

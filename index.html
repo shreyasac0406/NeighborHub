@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeighborHub - Local Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">NeighborHub 🏘️</div>
+    <input type="text" placeholder="Search products..." onkeyup="searchProduct(this.value)" />
+  </header>
+
+  <section class="filters">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Electronics')">📱 Electronics</button>
+    <button onclick="filterCategory('Furniture')">🪑 Furniture</button>
+    <button onclick="filterCategory('Clothing')">👕 Clothing</button>
+    <button onclick="filterCategory('Books')">📚 Books</button>
+    <button onclick="filterCategory('Appliances')">🍽️ Appliances</button>
+    <button onclick="filterCategory('Vehicles')">🚗 Vehicles</button>
+    <button onclick="filterCategory('Toys')">🧸 Toys</button>
+  </section>
+
+  <main id="productList">
+    <!-- Demo Ads with Placeholder Images -->
+    <div class="product" data-category="Electronics">
+      <img src="https://via.placeholder.com/300x180?text=Phone" alt="Phone" />
+      <h3>iPhone 13</h3>
+      <p>₹50,000 - Lightly used</p>
+    </div>
+    <div class="product" data-category="Books">
+      <img src="https://via.placeholder.com/300x180?text=Book" alt="Book" />
+      <h3>Atomic Habits</h3>
+      <p>₹250 - Like new</p>
+    </div>
+    <div class="product" data-category="Vehicles">
+      <img src="https://via.placeholder.com/300x180?text=Scooter" alt="Scooter" />
+      <h3>Honda Activa</h3>
+      <p>₹45,000 - 2019 Model</p>
+    </div>
+    <div class="product" data-category="Furniture">
+      <img src="https://via.placeholder.com/300x180?text=Sofa" alt="Sofa" />
+      <h3>2-Seater Sofa</h3>
+      <p>₹6,000 - Excellent Condition</p>
+    </div>
+    <div class="product" data-category="Clothing">
+      <img src="https://via.placeholder.com/300x180?text=Jacket" alt="Jacket" />
+      <h3>Winter Jacket</h3>
+      <p>₹1,200 - Almost new</p>
+    </div>
+  </main>
+
+  <button class="post-btn" onclick="document.getElementById('postModal').style.display='block'">+ Post an Ad</button>
+
+  <!-- Modal -->
+  <div class="modal" id="postModal">
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('postModal').style.display='none'">&times;</span>
+      <input type="text" id="productTitle" placeholder="Product Title" />
+      <input type="text" id="productPrice" placeholder="Price" />
+      <select id="productCategory">
+        <option value="Electronics">Electronics</option>
+        <option value="Furniture">Furniture</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Books">Books</option>
+        <option value="Appliances">Appliances</option>
+        <option value="Vehicles">Vehicles</option>
+        <option value="Toys">Toys</option>
+      </select>
+      <input type="file" id="productImage" accept="image/*" onchange="previewImage(event)" />
+      <img id="imagePreview" style="display:none; max-width: 100%; margin: 10px 0;" />
+      <button onclick="addProduct()">Post Ad</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
